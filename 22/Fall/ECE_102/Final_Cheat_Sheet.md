@@ -3,7 +3,7 @@
 **Decomposition**: For $x(t)$, $x_e(t) = \frac{1}{2}\cdot(x(t) + x(-t))$, $x_o(t) = \frac{1}{2}\cdot(x(t) - x(-t))$
 For $x(t)$, $\quad$Amplitude Scaling: $ax(t)$, $\quad$ Time Scaling: $x(at)$ $\quad$Time Shift: $x(t-t_1)$
 **Combining Operations**: SADMEP or Expand (), Perform shifts, Scale with respect to origin.
-**Energy**: $E_x = \lim\limits_{t \to \infin}{\int_{-T}^{T}|x(t)|^2\,dt}\qquad$**Power**: $P_x = \lim\limits_{t \to \infin}{\frac{1}{2T}\int_{-T}^{T}|x(t)|^2\,dt}$
+**Energy**: $E_x = \lim\limits_{t \to \infty}{\int_{-T}^{T}|x(t)|^2\,dt}\qquad$**Power**: $P_x = \lim\limits_{t \to \infty}{\frac{1}{2T}\int_{-T}^{T}|x(t)|^2\,dt}$
 ### Periodic Signals
 For $x(t) = x_1(t) + x_2(t)$, $T = LCM(T_1, T_2)$, Given integer multiple
 $\frac{d}{dx}\sin(x) = \cos(x),\qquad\sin(\theta)=\cos(\theta-\frac{\pi}{2})\qquad$ $\omega_0=2\pi f = \frac{2\pi}{T_0}$
@@ -28,12 +28,12 @@ Common Signals:
 **Impulse Properties**:
 $x(t)\cdot\delta(t)=x(0)\cdot\delta(t)$
 $x(t)\cdot\delta(t-T)=x(T)\cdot\delta(t)$: i.e. only the sample of x(T) at time T and 0 else
-$\int_{-\infin}^{\infin}x(t)\cdot\delta(t-T)\;dt=x(T)$
+$\int_{-\infty}^{\infty}x(t)\cdot\delta(t-T)\;dt=x(T)$
 **Impulse Response**: $h(t) = H[\delta(t)]$
 
 ### LTI, Causality, Stability and Memory
 **Causal Signals**: $x(t)$, where $t\ge0$,$\quad$ **Noncausal Signals**: $x(t)$, where $t\lt0$,$\quad$**Anticausal Signals**: $x(t)$, where $t\le0$: Backwards
-**BIBO**: Prove that for a bounded input: M<sub>x</sub> there is a bounded output M<sub>y</sub>. $\int_{-\infin}^{\infin}{x(t)dt}$
+**BIBO**: Prove that for a bounded input: M<sub>x</sub> there is a bounded output M<sub>y</sub>. $\int_{-\infty}^{\infty}{x(t)dt}$
 **Causal**: (Note this is for systems and not signals): Show that the signal does not require future values from the input.
 **Time invariance**: Show that delayed input = delayed output.
 **Linearity**: Show Homogeneity and Superposition. 
@@ -43,15 +43,15 @@ $\int_{-\infin}^{\infin}x(t)\cdot\delta(t-T)\;dt=x(T)$
 **Invertibility**: If input can be recovered from output.
 **Extended Linearity**: Just means that linearity of a sum/integral holds if the function inside is linear.
 ### Convolution
-For $y(t)=H[x(t)]$, where H is LTI system, $y(t)=H[\int_{-\infin}^{\infin}x(\tau)\delta(t-\tau)d\tau]$
-= $\int_{-\infin}^\infin x(\tau)h(t-\tau)d\tau$
-**For a causal LTI system**, $\int_{-\infin}^{t}x(\tau)h(t-\tau)d\tau$
+For $y(t)=H[x(t)]$, where H is LTI system, $y(t)=H[\int_{-\infty}^{\infty}x(\tau)\delta(t-\tau)d\tau]$
+= $\int_{-\infty}^\infty x(\tau)h(t-\tau)d\tau$
+**For a causal LTI system**, $\int_{-\infty}^{t}x(\tau)h(t-\tau)d\tau$
 **Convolving with impulse**: $x(t)\ast\delta(t-T) = x(t-T)$: This gives Identity/Delay
-**Integration** using convolution: $x(t) \ast u(t) = \int_{-\infin}^{t}x(\tau)d\tau$
+**Integration** using convolution: $x(t) \ast u(t) = \int_{-\infty}^{t}x(\tau)d\tau$
 
 ### Fourier Series
 For a well-behaved periodic signal: $f(t)$,
-$f(t)=\sum\limits_{k=-\infin}^\infin{c_k}e^{jk\omega_0t}$, where c<sub>k</sub> can be given by
+$f(t)=\sum\limits_{k=-\infty}^\infty{c_k}e^{jk\omega_0t}$, where c<sub>k</sub> can be given by
 $c_k=\frac{1}{T}\int_\tau^{\tau+T_0}f(t)e^{-jk\omega_0t}dt$
 $\int_{t_0}^{t_0+T_0}e^{jk\omega_0t}=\int_{t_0}^{t_0+T_0}cos({k\omega_0t)} + j\int_{t_0}^{t_0+T_0}sin({k\omega_0t)}$
 **Also**
@@ -65,7 +65,7 @@ $\therefore$ $\qquad f(t)$ is even & real, $c_k$ is real $\qquad$ and $\qquad f(
 
 **Parsevals Theorum**:
 For $x(t)$ with a fourier transform,
-$P=\frac{1}{T_0}\int_{t_0}^{t_0+T_0}|x(t)|^2dt=\sum\limits_{k=-\infin}^{\infin}|c_k|^2=\sum\limits_{k=-\infin}^{\infin}c_kc_k^*$
+$P=\frac{1}{T_0}\int_{t_0}^{t_0+T_0}|x(t)|^2dt=\sum\limits_{k=-\infty}^{\infty}|c_k|^2=\sum\limits_{k=-\infty}^{\infty}c_kc_k^*$
 
 For $c_k=|c_k|e^{j\measuredangle c_k}$, We can have a Amplitude/Phase plot: ex: $\frac{3}{2}e^{2\pi jt}$.
 
@@ -73,8 +73,8 @@ For $c_k=|c_k|e^{j\measuredangle c_k}$, We can have a Amplitude/Phase plot: ex: 
 For a system H, if $h(t)\ast x(t)=ax(t),\; x(t)$ is an eigenfunction.
 
 For a signal $x(t) = e^{(\sigma+j\omega)t}$, $s=\sigma+j\omega$
-$y(t)=\int_{-\infin}^\infin{h(\tau)e^{s(t-\tau)}}d\tau=\int_{-\infin}^\infin{h(\tau)e^{st}e^{-s\tau}}d\tau=e^{st}\int_{-\infin}^\infin{h(\tau)e^{-s\tau}}d\tau$
-We have $H(s)=\int_{-\infin}^\infin{h(\tau)e^{-s\tau}}d\tau$ and $y(t) = H(s)e^{st}$
+$y(t)=\int_{-\infty}^\infty{h(\tau)e^{s(t-\tau)}}d\tau=\int_{-\infty}^\infty{h(\tau)e^{st}e^{-s\tau}}d\tau=e^{st}\int_{-\infty}^\infty{h(\tau)e^{-s\tau}}d\tau$
+We have $H(s)=\int_{-\infty}^\infty{h(\tau)e^{-s\tau}}d\tau$ and $y(t) = H(s)e^{st}$
 
 For a square wave which is 1 for -0.5 to 0.5,
 $sinc(t) = \frac{\sin(\pi t)}{\pi t}$, also $sinc(0)=1$
