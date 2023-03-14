@@ -4,7 +4,7 @@ I may also choose to leave out some classes if I didn't like the class, thought 
 
 ## Classes Included
 - [ECE 102](./22-23/Fall/ECE_102)
-- [CS 31](./22-23/Fall/CS_31)
+- [CS 31](./22-23/Fall/CS_31)(Ok but not really lmao).
 - [ENGR 96A](./22-23/Fall/ENGR_96A)
 
 ## Classes Not Included
