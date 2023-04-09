@@ -6,5 +6,5 @@
 
 **Review:** Not for me
 
-## Course Material
-I was told that I am not allowed to upload these so my projects will be here but gitignored. If you want help with the projects, just send me a message.
+## Material and How to succeed
+Don't have much to say lol. 

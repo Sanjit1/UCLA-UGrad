@@ -4,7 +4,7 @@
 
 **Term**: Fall 2022
 
-**Review**: Me like
+**Review**: ENGR 96's are always fun. This one was no exception. Take one, actually take as many as you can. 
 
 ## Class Structure
 This Engineering 96A course was Underwater Robotics. 
